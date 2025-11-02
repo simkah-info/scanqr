@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Pendaftaran Nikah - SIMKAH</title>
+    <style>
+        /* CSS untuk mereplikasi tampilan halaman */
+
+        /* Variabel Warna */
+        :root {
+            --color-kemenag-green-dark: #00703c;
+            --color-kemenag-green-light: #52a852;
+            --color-text-dark: #333;
+            --color-blue-link: #3182CE;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* --- Latar Belakang Gambar Baru --- */
+            background-image: url('1000283928.png'); /* Ganti dengan nama file gambar Anda */
+            background-size: cover; /* Menutupi seluruh area */
+            background-repeat: no-repeat; /* Jangan ulangi gambar */
+            background-position: center center; /* Posisikan di tengah */
+            background-attachment: fixed; /* Gambar tetap saat scroll */
+            /* --------------------------------- */
+            color: var(--color-text-dark);
+        }
+
+        /* --- Header/Banner Area --- */
+        .top-container {
+            background: linear-gradient(to right, #25a044, #52a852); /* Gradien hijau seperti di screenshot */
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-content {
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+            color: white;
+        }
+        
+        .header-content h1 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .header-content p {
+            font-size: 0.9em;
+            margin: 0 0 10px 0;
+        }
+
+        .banner-logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        /* --- CSS untuk Gambar Logo Kemenag Sesungguhnya --- */
+        .kemenag-logo-actual {
+            width: 50px; /* Ukuran default logo */
+            height: 50px; 
+            border-radius: 50%;
+            margin-right: 10px;
+            /* Border dihilangkan karena logo sudah punya latar belakang hijau */
+        }
+        /* ------------------------------------------------ */
+
+        .simkah-title {
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .simkah-title .main {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #FFFF00; /* Kuning SIMKAH */
+        }
+
+        .simkah-title .sub {
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+        
+        /* --- Main Content Area --- */
+        main {
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            margin: -20px auto 20px auto; /* Menaikkan ke atas banner */
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .info-title {
+            background-color: #e0f8e0;
+            color: var(--color-kemenag-green-dark);
+            padding: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px 5px 0 0;
+            margin: -20px -20px 20px -20px; /* Menutupi padding main */
+            text-align: center;
+        }
+
+        .login-button {
+            float: right;
+            padding: 5px 15px;
+            margin-top: -10px;
+            border: 1px solid white;
+            background: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-decoration: none; /* Hilangkan garis bawah pada link */
+            display: inline-block; /* Agar padding bekerja pada link */
+        }
+        
+        .data-box {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .perforasi-header {
+            background-color: var(--color-kemenag-green-light);
+            color: white;
+            padding: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .data-field-list {
+            padding: 15px;
+        }
+
+        .data-item {
+            display: flex;
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            font-size: 0.9em;
+        }
+
+        .data-item:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            flex-basis: 40%;
+            font-weight: normal;
+        }
+
+        .separator {
+            flex-basis: 5%;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .value {
+            flex-basis: 55%;
+            font-weight: bold;
+            color: var(--color-text-dark);
+        }
+
+        /* --- Styling untuk Tautan Download --- */
+        .download-link {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: var(--color-blue-link);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: center; /* Untuk menengahkan teks */
+            display: block; /* Agar menempati lebar penuh (100%) */
+            text-decoration: none; /* Hilangkan garis bawah link */
+        }
+
+        /* --- Copyright Footer --- */
+        footer {
+            background-color: var(--color-kemenag-green-dark);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.7em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="top-container">
+        <div class="header-content">
+            <div style="text-align: right; margin-bottom: 10px;">
+                <a href="https://simkah.kemenag.go.id/login" class="login-button">LOGIN</a>
+            </div>
+            
+            <div class="banner-logos">
+                <div class="simkah-title">
+                    <p class="main">SIMKAH</p>
+                    <p class="sub">Info Pendaftaran Nikah</p>
+                </div>
+                <img src="1000283927.png" alt="Logo Kemenag" class="kemenag-logo-actual">
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="info-title">Cek Nomor Perforasi</div>
+        
+        <div class="data-box">
+            <h3 class="perforasi-header">Nomor Perforasi - 105185555</h3>
+            
+            <div class="data-field-list">
+                
+                <div class="data-item">
+                    <span class="label">Nomor Perforasi</span>
+                    <span class="separator">:</span>
+                    <span class="value">105185555</span>
+                </div>
+                
+                <div class="data-item">
+                    <span class="label">Nomor Akta</span>
+                    <span class="separator">:</span>
+                    <span class="value">838/22/XII/2024</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Provinsi</span>
+                    <span class="separator">:</span>
+                    <span class="value">JAWA BARAT</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Kabupaten/Kota</span>
+                    <span class="separator">:</span>
+                    <span class="value">BANDUNG</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Kecamatan</span>
+                    <span class="separator">:</span>
+                    <span class="value">CILEUNYI</span>
+                </div>
+                
+                <div class="data-item">
+                    <span class="label">Nama Suami</span>
+                    <span class="separator">:</span>
+                    <span class="value">RIVALDO FIRMAN DUROHMAN</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">NIK Suami</span>
+                    <span class="separator">:</span>
+                    <span class="value">3273041203990004</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Nama Istri</span>
+                    <span class="separator">:</span>
+                    <span class="value">MEILANI SYARIPUDIN</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">NIK Istri</span>
+                    <span class="separator">:</span>
+                    <span class="value">3204317005020002</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Di Luar atau Di KUA</span>
+                    <span class="separator">:</span>
+                    <span class="value">Di Luar KUA</span>
+                </div>
+                
+                <div class="data-item">
+                    <span class="label">Tanggal Akad</span>
+                    <span class="separator"></span>
+                    <span class="value"></span>
+                </div>
+                
+                <div class="data-item">
+                    <span class="label">Masehi</span>
+                    <span class="separator">:</span>
+                    <span class="value">22-12-2024</span>
+                </div>
+                
+                <div class="data-item">
+                    <span class="label">Hijriah</span>
+                    <span class="separator">:</span>
+                    <span class="value">20 JUMADIL AKHIR 1446</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Jam Akad</span>
+                    <span class="separator">:</span>
+                    <span class="value">10:00</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Alamat Lokasi Akad Nikah</span>
+                    <span class="separator">:</span>
+                    <span class="value">CINUNUK, KEC. CILEUNYI, KAB. BANDUNG</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Wali Nikah</span>
+                    <span class="separator">:</span>
+                    <span class="value">AGUS SYARIPUDIN (Nasab)</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://simkah.kemenag.go.id/kartu/HIlVv56eFFfbzVv7s37XMw==" class="download-link">
+            Download Kartu Nikah Digital
+        </a>
+    </main>
+
+    <footer>
+        Copyright © 2018 Dit. Direktorat Jenderal Bimbingan Masyarakat Islam - Kementerian Agama Republik Indonesia. All Right Reserved
+    </footer>
+</body>
+</html>
